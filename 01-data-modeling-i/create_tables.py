@@ -6,10 +6,10 @@ import psycopg2
 PostgresCursor = NewType("PostgresCursor", psycopg2.extensions.cursor)
 PostgresConn = NewType("PostgresConn", psycopg2.extensions.connection)
 
-table_drop_actors = "DROP TABLE IF EXISTS actors"
-table_drop_repo = "DROP TABLE IF EXISTS repo"
-table_drop_payload = "DROP TABLE IF EXISTS payload"
-table_drop_org = "DROP TABLE IF EXISTS org"
+table_drop_actors = "DROP TABLE IF EXISTS actors CASCADE"
+table_drop_repo = "DROP TABLE IF EXISTS repo CASCADE"
+table_drop_payload = "DROP TABLE IF EXISTS payload CASCADE"
+table_drop_org = "DROP TABLE IF EXISTS org CASCADE"
 table_drop_events = "DROP TABLE IF EXISTS events"
 
 table_create_actors = """
@@ -38,7 +38,7 @@ table_create_payload = """
         distinct_size int,
         ref varchar(100),
         head varchar(100),
-        before_code varchar(100),
+        before varchar(100),
         commits varchar(255),
         PRIMARY KEY(push_id)
     )
