@@ -19,7 +19,7 @@ table_create_actors = """
         actor_display_login varchar(100),
         actor_gravatar_id varchar(100),
         actor_url varchar(255),
-        actor__avatar_url varchar(255),
+        actor_avatar_url varchar(255),
         PRIMARY KEY(actor_id)
     )
 """
