@@ -52,5 +52,5 @@ docker compose down
 
 ## Entity Relationship (ER) Diagram
 
-Image:
+
 ![](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/01-data-modeling-i/ERD-01%20DW%20%26%20BI.png)
