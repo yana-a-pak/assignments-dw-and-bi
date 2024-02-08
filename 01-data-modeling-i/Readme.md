@@ -30,7 +30,7 @@ Connect postgres and login: http://localhost:8080/
 * Password: postgres
 * Database: postgres
 
-## Insert your 'code' here
+## Insert your `code` here
 
 create table:
 `````````````````````````````````````````````
@@ -48,3 +48,9 @@ To shutdown, press Ctrl+C and run:
 `````````````````````````````````````````````
 docker compose down
 `````````````````````````````````````````````
+
+
+## Entity Relationship (ER) Diagram
+
+Image:
+![](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/01-data-modeling-i/ERD-01%20DW%20%26%20BI.png)
