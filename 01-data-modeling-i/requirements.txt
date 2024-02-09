@@ -1,4 +1,5 @@
+numpy==1.26.3
 psycopg2==2.9.9
-json==2.0.9
-PostgreSQL==13.13 
-Adminer==4.8.1
+python-dateutil==2.8.2
+pytz==2023.3.1
+six==1.16.0
