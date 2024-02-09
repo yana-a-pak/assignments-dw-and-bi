@@ -11,6 +11,11 @@ docker nginx
 docker run -p 8080:80 nginx
 `````````````````````````````````````````````
 
+or pip install requirments
+`````````````````````````````````````````````
+pip install -r requirements.txt
+`````````````````````````````````````````````
+
 **Port**  
 
 * 8080 = Adminer
