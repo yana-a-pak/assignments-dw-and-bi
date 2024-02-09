@@ -31,3 +31,5 @@ docker compose down
 ## Example query from cassandra keyspace
 
 
+
+![](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/02-data-modeling-ii/query%20with%20cassandra.JPG)
