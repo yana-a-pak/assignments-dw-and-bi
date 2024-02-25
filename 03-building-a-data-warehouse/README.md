@@ -29,10 +29,10 @@ project_ID = ""YOUR_GCP_PROJECT""
 
 ### Set Keyfile Path
 ```sh
-project_ID = ""YOUR_GCP_PROJECT""
+keyfile = ""YOUR_KEYFILE_PATH""
 ```
 
-### Keyfile Path from GCP
+### Keyfile Path in GCP
 ```sh
 IAM & Admin --> Service Accounts
 Create Service Accounts : 
