@@ -36,13 +36,13 @@ def main(dataset_id, table_id, file_path):
     # keyfile = os.environ.get("KEYFILE_PATH")
     #
     # แต่เพื่อความง่ายเราสามารถกำหนด File Path ไปได้เลยตรง ๆ
-    keyfile = "YOUR_KEYFILE_PATH"
+    keyfile = "../credentials/swudw525-swu-ds525-load-data-to-bigquery-3e0880a88106.json"
     service_account_info = json.load(open(keyfile))
     credentials = service_account.Credentials.from_service_account_info(service_account_info)
 
     # โค้ดส่วนนี้จะเป็นการสร้าง Client เชื่อมต่อไปยังโปรเจค GCP ของเรา โดยใช้ Credentials ที่
     # สร้างจากโค้ดข้างต้น
-    project_id = "YOUR_GCP_PROJECT"
+    project_id = "swudw525"
     client = bigquery.Client(
         project=project_id,
         credentials=credentials,
@@ -57,6 +57,7 @@ def main(dataset_id, table_id, file_path):
         schema=[
             bigquery.SchemaField("id", bigquery.SqlTypeNames.STRING),
             bigquery.SchemaField("type", bigquery.SqlTypeNames.STRING),
+            bigquery.SchemaField("actor", bigquery.SqlTypeNames.STRING),
         ],
     )
 
@@ -78,11 +79,20 @@ if __name__ == "__main__":
 
     with open("github_events.csv", "w") as csv_file:
         writer = csv.writer(csv_file)
+        writer.writerow([
+            "id", 
+            "type",
+            "login",
+        ])
 
         for datafile in all_files:
             with open(datafile, "r") as f:
                 data = json.loads(f.read())
                 for each in data:
-                    writer.writerow([each["id"], each["type"]])
+                    writer.writerow([
+                        each["id"], 
+                        each["type"],
+                        each["actor"]["login"],
+                    ])
 
-    main(dataset_id, table_id, file_path)
+    main(dataset_id="github", table_id="events", file_path="github_events.csv")
