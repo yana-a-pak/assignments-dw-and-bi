@@ -5,7 +5,7 @@
 
 ### 1. change directory to project 04-building-a-data-lake
 ```sh
-$ cd 04-building-a-data-lake
+$ cd 04-building-a-data-lake/
 ```
 
 ### 2. applying code for saving jupyter lab
