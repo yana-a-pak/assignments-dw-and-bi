@@ -18,9 +18,9 @@ docker-compose.yaml Input # (stop working code)
 
 AIRFLOW__CORE__EXECUTOR: CeleryExecutor 
 
-(`Adding line 57 working replace to line 56`
+`Adding line 57 working replace to line 56`
 
-AIRFLOW__CORE__EXECUTOR: LocalExecutor)
+AIRFLOW__CORE__EXECUTOR: LocalExecutor
 
 `line 59-60` 
 
@@ -28,22 +28,26 @@ AIRFLOW__CORE__EXECUTOR: LocalExecutor)
 
  AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
 
-`line 81-82` from
+`line 81-82` 
 
  redis:
-        to
+        
    condition: service_healthy
 
 `line 102-112` from
 
  redis:
+
         to
+
      restart: always
 
 `line 146-182` from
 
  airflow-worker:
+
         to
+
        condition: service_completed_successfully
 
 `line 261-263`
