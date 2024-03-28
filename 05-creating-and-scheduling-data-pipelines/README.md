@@ -15,35 +15,48 @@ echo -e "AIRFLOW_UID=$(id -u)" > .env
 docker-compose.yaml Input # (stop working code)
 
 `line 56` 
-AIRFLOW__CORE__EXECUTOR: CeleryExecutor 
-`Adding line 57 working replace line 56`
-AIRFLOW__CORE__EXECUTOR: LocalExecutor
 
-`line 59-60`
+AIRFLOW__CORE__EXECUTOR: CeleryExecutor 
+
+(`Adding line 57 working replace to line 56`
+
+AIRFLOW__CORE__EXECUTOR: LocalExecutor)
+
+`line 59-60` 
+
  AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
+
  AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
 
-`line 81-82`
+`line 81-82` from
+
  redis:
+        to
    condition: service_healthy
 
-`line 102-112`
+`line 102-112` from
+
  redis:
-        ......
+        to
      restart: always
 
-`line 146-182`
+`line 146-182` from
+
  airflow-worker:
-        ......
+        to
        condition: service_completed_successfully
 
 `line 261-263`
+
  You can enable flower by adding "--profile flower" option e.g. docker-compose --profile flower up
+
  or by explicitly targeted on the command line e.g. docker-compose up flower.
+
  See: https://docs.docker.com/compose/profiles/
 
 
-Running Docker
+### Running Docker
+
 ```sh
 docker-compose up
 ```
@@ -61,7 +74,7 @@ Show Graph
 Show Log detials
 ![Log](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/3.Log.JPG)
 
-## Config schedule by crontab guru (https://crontab.guru/)
+Config schedule by crontab guru (https://crontab.guru/)
 
 ### Shutdown environment workspace:
 ```sh
