@@ -16,47 +16,43 @@ docker-compose.yaml Input # (stop working code)
 
 `line 56` 
 
-AIRFLOW__CORE__EXECUTOR: CeleryExecutor 
+56 AIRFLOW__CORE__EXECUTOR: CeleryExecutor 
 
 `Adding line 57 working replace to line 56`
 
-AIRFLOW__CORE__EXECUTOR: LocalExecutor
+57 AIRFLOW__CORE__EXECUTOR: LocalExecutor
 
 `line 59-60` 
 
- AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
+59 AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
 
- AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
+60 AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
 
 `line 81-82` 
 
- redis:
-        
-   condition: service_healthy
+81 redis:
+
+82 condition: service_healthy
 
 `line 102-112` from
 
- redis:
+102 redis:
 
-        to
-
-     restart: always
+112restart: always
 
 `line 146-182` from
 
- airflow-worker:
+146 airflow-worker:
 
-        to
-
-       condition: service_completed_successfully
+182 condition: service_completed_successfully
 
 `line 261-263`
 
- You can enable flower by adding "--profile flower" option e.g. docker-compose --profile flower up
+261 You can enable flower by adding "--profile flower" option e.g. docker-compose --profile flower up
 
- or by explicitly targeted on the command line e.g. docker-compose up flower.
+262 or by explicitly targeted on the command line e.g. docker-compose up flower.
 
- See: https://docs.docker.com/compose/profiles/
+263 See: https://docs.docker.com/compose/profiles/
 
 
 ### Running Docker
