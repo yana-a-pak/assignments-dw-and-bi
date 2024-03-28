@@ -52,17 +52,21 @@ Airflow UI port 8080 (localhost:8080)
 User & Password : airflow (by default line 241-242)
 
 Show All DAGs (After Config code in files .py)
-![DAGs]()
+![DAGs](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/1.DAG.JPG)
 
 Show Graph
-![Graph]()
+![Graph](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/2.Graph.JPG)
 
 Show Log detials
-![Log]()
+![Log](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/3.Log.JPG)
 
-## data schedule
-ให้เข้าที่ tab Dags แล้ว etl โดยเราสามารถตรวจสอบการทำงานได้ในหน้า Graph
-![Graph]()
+## Config schedule by crontab guru (https://crontab.guru/)
+
+### Shutdown environment workspace:
+```sh
+$ docker-compose down
+```
+
 
 
 
