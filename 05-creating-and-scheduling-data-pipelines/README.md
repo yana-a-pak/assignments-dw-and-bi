@@ -67,12 +67,15 @@ Airflow UI port 8080 (localhost:8080)
 User & Password : airflow (by default line 241-242)
 
 `Show All DAGs` (After Config code in files .py)
+
 ![DAGs](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/1.DAG.JPG)
 
 `Show Graph`
+
 ![Graph](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/2.Graph.JPG)
 
 `Show Log details`
+
 ![Log](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/3.Log.JPG)
 
 Config schedule by `crontab guru` (https://crontab.guru/)
