@@ -38,7 +38,7 @@ docker-compose.yaml Input # (stop working code)
 
 102 redis:
 
-112restart: always
+112 restart: always
 
 `line 146-182` from
 
@@ -63,18 +63,19 @@ docker-compose up
 
 ### 3. Airflow
 Airflow UI port 8080 (localhost:8080)
+
 User & Password : airflow (by default line 241-242)
 
-Show All DAGs (After Config code in files .py)
+`Show All DAGs` (After Config code in files .py)
 ![DAGs](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/1.DAG.JPG)
 
-Show Graph
+`Show Graph`
 ![Graph](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/2.Graph.JPG)
 
-Show Log detials
+`Show Log details`
 ![Log](https://github.com/yana-a-pak/Assignments-dw-and-bi/blob/main/05-creating-and-scheduling-data-pipelines/Image/3.Log.JPG)
 
-Config schedule by crontab guru (https://crontab.guru/)
+Config schedule by `crontab guru` (https://crontab.guru/)
 
 ### Shutdown environment workspace:
 ```sh
