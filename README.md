@@ -7,3 +7,5 @@
 3. Data Warehouse with BigQuery (GCP) (03-building-a-data-warehouse)
 
 4. Data Lake with Spark (04-building-a-data-lake)
+
+5. Data Pipeline with Airflow (05-creating-and-scheduling-data-pipelines)
