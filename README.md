@@ -9,3 +9,5 @@
 4. Data Lake with Spark (04-building-a-data-lake)
 
 5. Data Pipeline with Airflow (05-creating-and-scheduling-data-pipelines)
+
+6. Data Analytics with data build tool(dbt) (06-analytics-engineering)
